@@ -29,7 +29,7 @@ public class Person {
     private String workField;
 
     @Column(name = "cpf")
-    @Size(min = 11, max = 11, message = "CPF must be 11 characters long")
+    @Size(min = 11, message = "CPF must be at least 11 characters long")
     private String cpf;
 
     @Column(name = "email")
@@ -43,12 +43,12 @@ public class Person {
     private String address;
 
     @Column(name = "postal_code")
-    @Size(min = 8, max = 8, message = "Postal code must be 8 characters long")
+    @Size(min = 8, message = "Postal code must be at least 8 characters long")
     private String postalCode;
 
     public Person(PersonDTO personDTO) {
         this.fullName = personDTO.fullName();
-        this.tagName = personDTO.tagName().toUpperCase();
+        this.tagName = personDTO.tagName();
         this.workField = personDTO.workField();
         this.cpf = personDTO.cpf();
         this.email = personDTO.email();
