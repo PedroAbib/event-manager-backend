@@ -2,7 +2,6 @@ package com.EventManager.controllers;
 
 import com.EventManager.dto.RegistrationDTO;
 import com.EventManager.dto.RegistrationResponseDTO;
-import com.EventManager.entities.Registration;
 import com.EventManager.services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
